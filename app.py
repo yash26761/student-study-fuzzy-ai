@@ -80,47 +80,62 @@ with st.sidebar:
     st.session_state["user_provider"] = provider_code
 
     if provider_code == "groq":
-        # Check if user already entered a key or if an env fallback exists
         current_val = st.session_state.get("user_groq_key", "")
-        if not current_val and os.getenv("GROQ_API_KEY"):
-            # Optional local default if on user's own machine
-            current_val = os.getenv("GROQ_API_KEY")
+        # Check if secret is configured in Streamlit Cloud Secrets or local environment
+        cloud_secret_available = False
+        try:
+            if hasattr(st, "secrets") and st.secrets.get("GROQ_API_KEY"):
+                cloud_secret_available = True
+        except Exception:
+            pass
 
         groq_key_input = st.text_input(
             "Groq API Key",
             value=current_val,
             type="password",
-            placeholder="gsk_...",
+            placeholder="Pre-configured in Cloud Secrets" if cloud_secret_available else "gsk_...",
             help="Your API key is kept in this browser session and is not saved to the project files or displayed to other users.",
         )
         st.session_state["user_groq_key"] = groq_key_input.strip() if groq_key_input else ""
 
         if st.session_state["user_groq_key"]:
-            st.success("✅ Groq key active in this browser")
+            st.success("✅ Custom Groq key active in this browser")
+        elif cloud_secret_available:
+            st.success("✅ Groq key active (from Streamlit Secrets)")
+        elif os.getenv("GROQ_API_KEY"):
+            st.success("✅ Groq key active (from environment)")
         else:
             st.info("💡 Get a free key at [console.groq.com/keys](https://console.groq.com/keys)")
 
     else:
         current_val = st.session_state.get("user_openai_key", "")
-        if not current_val and os.getenv("OPENAI_API_KEY"):
-            current_val = os.getenv("OPENAI_API_KEY")
+        cloud_secret_available = False
+        try:
+            if hasattr(st, "secrets") and st.secrets.get("OPENAI_API_KEY"):
+                cloud_secret_available = True
+        except Exception:
+            pass
 
         openai_key_input = st.text_input(
             "OpenAI API Key",
             value=current_val,
             type="password",
-            placeholder="sk-...",
+            placeholder="Pre-configured in Cloud Secrets" if cloud_secret_available else "sk-...",
             help="Your API key is kept in this browser session and is not saved to the project files or displayed to other users.",
         )
         st.session_state["user_openai_key"] = openai_key_input.strip() if openai_key_input else ""
 
         if st.session_state["user_openai_key"]:
-            st.success("✅ OpenAI key active in this browser")
+            st.success("✅ Custom OpenAI key active in this browser")
+        elif cloud_secret_available:
+            st.success("✅ OpenAI key active (from Streamlit Secrets)")
+        elif os.getenv("OPENAI_API_KEY"):
+            st.success("✅ OpenAI key active (from environment)")
         else:
             st.info("💡 Enter your OpenAI key to enable GPT models.")
 
     st.divider()
-    st.caption("🔒 **Session Privacy**: When you close or refresh this tab, the browser-session key is cleared from memory.")
+    st.caption("🔒 **Session Privacy**: When you close or refresh this tab, browser-entered keys are cleared from memory.")
 
 # -----------------------------------------------------------------------------
 # Main Header

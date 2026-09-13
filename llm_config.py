@@ -56,9 +56,14 @@ def _get_secret(key_name: str) -> str | None:
             if browser_provider and str(browser_provider).strip():
                 return str(browser_provider).strip()
 
-        # 2. Try Streamlit secrets store
-        if key_name in st.secrets and st.secrets[key_name]:
-            return str(st.secrets[key_name]).strip()
+        # 2. Try Streamlit secrets store (Streamlit Community Cloud)
+        try:
+            if hasattr(st, "secrets"):
+                cloud_secret = st.secrets.get(key_name)
+                if cloud_secret and str(cloud_secret).strip():
+                    return str(cloud_secret).strip()
+        except Exception:
+            pass
     except Exception:
         pass
 

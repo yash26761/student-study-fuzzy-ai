@@ -167,6 +167,19 @@ The application will open at:
 http://localhost:8501
 ```
 
+## Deploy to Streamlit Community Cloud (Free)
+
+1. Sign in to [share.streamlit.io](https://share.streamlit.io/) using your GitHub account (`yash26761`).
+2. Click **Create app** (or **New app**), and select:
+   - **Repository:** `yash26761/student-study-fuzzy-ai`
+   - **Branch:** `main`
+   - **Main file path:** `app.py`
+3. Expand **Advanced settings...** $\rightarrow$ **Secrets**, and enter your Groq API key:
+   ```toml
+   GROQ_API_KEY = "your_groq_api_key_here"
+   ```
+4. Click **Deploy!**
+
 ## Example
 
 **Student Input:**
