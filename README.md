@@ -22,6 +22,45 @@ A second LangChain/LLM step explains the recommendation and provides simple stud
 - Give a daily study-time recommendation.
 - Explain the result and provide study tips.
 
+## IKS Connection
+
+This project is developed under the **Indian Knowledge Systems (IKS)** initiative for Third Year B.Sc. IT.
+
+### 1. Selected IKS Theme
+**Indian Holistic and Learner-Centred Educational Perspective.**
+
+### 2. Relevant Indian Educational Perspective
+In traditional Indian educational philosophy, learning is not viewed as a rigid, one-size-fits-all production line. It emphasizes:
+- **Learner-Centred Readiness (*Adhikara*):** Recognizes that every student starts from a unique state of readiness, prior study, and individual capacity.
+- **Self-Directed Study (*Svadhyaya*):** Stresses meaningful self-study, self-reflection, and realistic self-assessment rather than blind, stressful cramming.
+- **Balanced Effort (*Yukta Abhyasa*):** Promotes moderation and balance to avoid academic burnout and maintain mental well-being.
+
+### 3. Connection to Personalized Student Learning
+In modern exam preparation, students often face stressful, arbitrary advice (e.g., "study 10 hours daily regardless of anything"). This project implements the Indian holistic learning philosophy by assessing each student as an individual:
+- How many days remain before the exam?
+- How many hours have already been studied today?
+- How confident does the student feel about their preparation?
+
+The recommendation is customized to support balanced, sustainable daily progress rather than imposing harsh, identical quotas.
+
+### 4. Application of Modern AI
+Modern AI (**LangChain + Groq LLM**) acts as the natural-language interface. It allows students to describe their study situation in conversational English. The LLM extracts the relevant parameters into structured, validated Pydantic data and provides encouraging, actionable study tips.
+
+### 5. Role of Fuzzy Logic
+Human feelings about study readiness (e.g., "fair preparation", "exam is close") are continuous and gradual, not binary true/false. A **Mamdani Fuzzy Inference System** (with 18 rules and centroid defuzzification) calculates realistic study hours smoothly, avoiding the unnatural jumps of rigid `if/else` logic.
+
+### 6. What the IKS Component Does NOT Claim
+To maintain scientific and academic integrity:
+- We do **NOT** claim that ancient Indian texts invented fuzzy logic (fuzzy sets were mathematically introduced by Lotfi Zadeh in 1965).
+- We do **NOT** claim that ancient texts specify the 0–8 hour study formula or defuzzification math.
+- We do **NOT** claim that the 18 fuzzy rules were taken from Vedas or ancient scriptures.
+- The distinction is clear: **IKS provides the educational perspective and rationale**, while **modern AI and fuzzy logic provide the computational implementation**.
+
+### 7. Official Source References
+- **National Education Policy 2020 (NEP 2020):** Ministry of Education, Govt. of India. Emphasizes holistic, learner-centric education and integration of IKS. [NEP 2020 PDF](https://www.education.gov.in/sites/upload_files/mhrd/files/NEP_Final_English_0.pdf)
+- **IKS Division, Ministry of Education, Govt. of India:** Established at AICTE to promote interdisciplinary research bridging traditional knowledge with modern computing. [IKS Division Website](https://iksindia.org/)
+- For detailed academic documentation, see [`docs/iks_connection.md`](docs/iks_connection.md) and verified source records in [`docs/iks_sources.md`](docs/iks_sources.md).
+
 ## How It Works
 
 ```text
@@ -123,6 +162,9 @@ student-study-fuzzy-ai/
 ├── .gitignore
 │
 ├── docs/
+│   ├── iks_connection.md
+│   ├── iks_sources.md
+│   ├── PROJECT_SUMMARY.md
 │   └── viva_notes.md
 │
 └── tests/

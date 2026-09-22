@@ -2,6 +2,7 @@
 # AI-Based Study Time Recommendation System Using Fuzzy Logic
 
 **Academic Level:** Third Year B.Sc. Information Technology (B.Sc. IT)  
+**Project Category:** Individual IKS Project (Indian Knowledge Systems)  
 **Author:** Yash Sanjay Haldankar (`yash26761`)  
 **GitHub Repository:** [https://github.com/yash26761/student-study-fuzzy-ai](https://github.com/yash26761/student-study-fuzzy-ai)  
 **Date:** September 2026  
@@ -144,6 +145,9 @@ Calculates the exact center of gravity of the combined fuzzy area, ensuring cont
 
 #### Q10: How do you handle Groq API rate limits?
 > *"Groq free-tier has an Output Tokens Per Minute (OTPM) limit of 1,000. We enforce strict token budgeting by setting `max_tokens=250` for extraction and `max_tokens=600` for explanation, along with an automatic 2-attempt retry policy."*
+
+#### Q11: What is the Indian Knowledge Systems (IKS) connection?
+> *"The IKS connection is the Indian holistic and learner-centred educational perspective supported by NEP 2020. Rather than imposing rigid, stressful quotas, it respects the student's individual readiness (*adhikara*), encourages self-directed reflection (*svadhyaya*), and promotes balanced effort (*yukta abhyasa*). Modern AI and Fuzzy Logic provide the computational implementation of this learner-centered philosophy."*
 
 ---
 

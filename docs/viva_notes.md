@@ -85,3 +85,41 @@ preparation is poor."
 Two things: a recommended daily study time (in hours, 0–8) and a
 study-need level (Low/Medium/High), plus an AI-written explanation and
 3–5 study tips.
+
+---
+
+## IKS Viva Questions
+
+**1. What is the IKS connection in your project?**
+The IKS connection is the Indian holistic and learner-centred educational perspective. Instead of giving every student the same rigid study hours, the project honors the student's individual learning situation, current preparation level, and need for balanced effort.
+
+**2. Why did you select this IKS theme?**
+Because Indian educational philosophy strongly emphasizes that learning is personal and holistic (*Samagra*), not a mechanical factory routine. This provides the perfect pedagogical rationale for building a personalized study-time recommendation system.
+
+**3. What Indian educational perspective are you using?**
+Three core ideas: first, learner-centered readiness (*adhikara*), recognizing that each student has a unique starting point; second, self-directed study and reflection (*svadhyaya*); and third, balanced effort (*yukta abhyasa*), avoiding academic burnout through realistic moderation.
+
+**4. What is the source of the IKS content?**
+Official Government of India sources: the National Education Policy 2020 (NEP 2020, Ministry of Education) which mandates integrating IKS into modern education, and the guidelines of the Ministry of Education's IKS Division at AICTE.
+
+**5. How does IKS relate to your student study recommendation system?**
+IKS provides the human-centered educational objective: tailoring study advice to the individual student rather than enforcing rigid, one-size-fits-all quotas. The technology (AI and Fuzzy Logic) provides the computational tool to achieve this objective.
+
+**6. How is modern AI used?**
+Modern AI (LangChain + Groq LLM) is used to understand the student's natural-language description of their exam situation, extract structured numbers into Pydantic models, and generate encouraging study tips.
+
+**7. Why is fuzzy logic used?**
+Because human study readiness is continuous and vague, not binary true/false. Fuzzy logic models concepts like "exam is near" or "preparation is average" using membership curves and 18 rules, producing smooth, realistic study hours without sharp cut-offs.
+
+**8. Did you take the fuzzy rules directly from an ancient Indian text?**
+No, absolutely not. The 18 fuzzy rules were designed logically using modern academic reasoning and tested mathematically in Python with NumPy. They are not taken from any ancient text.
+
+**9. Did IKS create your fuzzy algorithm?**
+No. Fuzzy logic was invented mathematically by Professor Lotfi Zadeh in 1965. IKS provides the educational perspective and motivation; fuzzy logic is strictly the modern computational method.
+
+**10. What is the difference between the IKS component and the technology component?**
+IKS explains *why* personalized, balanced learning is needed from an Indian educational viewpoint. Technology (Python, LangChain, LLM, and Fuzzy Logic) is *how* the recommendation is computed and delivered.
+
+**11. How would you explain the IKS connection in one minute?**
+"My project is inspired by the Indian learner-centred educational philosophy supported by NEP 2020, which emphasizes that education must adapt to each student's individual readiness and promote balanced, self-directed study (*svadhyaya*) rather than rigid, stressful quotas. To implement this philosophy using modern technology, I use an LLM to understand the student's personal exam situation in natural language, and a Mamdani Fuzzy Inference System to calculate a realistic, balanced daily study recommendation without harsh Boolean cut-offs. IKS gives the educational purpose, while modern AI and Fuzzy Logic provide the computational implementation."
+

@@ -151,6 +151,19 @@ with st.expander("ℹ️ How this works", expanded=False):
         "4. **AI Coach Tips**: The model generates friendly, personalized study advice."
     )
 
+with st.expander("🏛️ IKS Educational Perspective", expanded=False):
+    st.markdown(
+        "**Indian Knowledge Systems (IKS) Perspective:**\n"
+        "Inspired by the Indian holistic and learner-centred educational philosophy (highlighted in NEP 2020 by the Ministry of Education). "
+        "It treats learning as an individual pursuit where study guidance must respect the student's unique readiness (*adhikara*), "
+        "promote self-directed reflection (*svadhyaya*), and maintain balanced effort (*yukta abhyasa*) rather than enforcing rigid, stressful quotas.\n\n"
+        "**AI & Fuzzy Computational Implementation:**\n"
+        "Modern Natural-Language AI (LangChain + Groq LLM) understands the student's situation in everyday words, and a Mamdani Fuzzy Inference System "
+        "(Lotfi Zadeh, 1965) computes realistic, balanced study hours using multi-variable rules.\n\n"
+        "*Note: IKS provides the educational perspective and motivation; modern AI and fuzzy mathematics provide the computational calculation.*"
+    )
+
+
 # -----------------------------------------------------------------------------
 # Input Form
 # -----------------------------------------------------------------------------
