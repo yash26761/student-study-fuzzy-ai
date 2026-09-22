@@ -53,10 +53,8 @@ student-study-fuzzy-ai/
 ├── visualization.py           # Matplotlib membership & centroid charts
 ├── requirements.txt           # Project dependencies
 ├── docs/                      # Academic documentation & screenshots
-│   ├── PROJECT_DOCUMENTATION.md  # Complete 10-page college project documentation
 │   ├── iks_connection.md     # Detailed IKS educational perspective analysis
 │   ├── iks_sources.md        # Official verified source records (NEP 2020, etc.)
-│   ├── viva_notes.md         # Comprehensive viva preparation Q&A guide
 │   └── screenshots/          # High-resolution live application screenshots
 └── tests/
     └── test_fuzzy.py          # 29 automated unit tests (Pytest)
